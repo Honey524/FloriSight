@@ -1,0 +1,58 @@
+services:
+  app:
+    image: honey254/florisight:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # Auth
+      NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-change-this-secret-for-shared-deployments}
+      DATABASE_URL: ${DATABASE_URL:-postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-florisight}}
+      # Google OAuth
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      # Ollama LLM (optional)
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-}
+      # Sarvam AI voice transcription (optional)
+      SARVAM_API_KEY: ${SARVAM_API_KEY:-}
+      # YOLO / tracking tuning
+      FLORISIGHT_TRACK_CONFIDENCE: ${FLORISIGHT_TRACK_CONFIDENCE:-0.35}
+      FLORISIGHT_TRACK_FRAME_STRIDE: ${FLORISIGHT_TRACK_FRAME_STRIDE:-1}
+      FLORISIGHT_PATH_POINT_STRIDE: ${FLORISIGHT_PATH_POINT_STRIDE:-5}
+      FLORISIGHT_MIN_DWELL_SECONDS: ${FLORISIGHT_MIN_DWELL_SECONDS:-3}
+      FLORISIGHT_YOLO_MODEL: ${FLORISIGHT_YOLO_MODEL:-/app/backend/yolov8n.pt}
+      # Ports
+      PORT: 3000
+      SOCKET_PORT: 3001
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "3000:3000"   # Next.js app
+      - "3001:3001"   # Socket.io real-time server
+    restart: unless-stopped
+
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-florisight}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,0 +1,278 @@
+<mxfile host="65bd71144e">
+    <diagram id="9RYyh8lUEUvGlMcfZdBb" name="Level 2 - Chat NLP (2.0)">
+        <mxGraphModel dx="1626" dy="1750" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="DFD Level 2 — Process 2.0: Chat + NLP Logging" style="text;html=1;fontSize=13;fontStyle=1;align=center;fontFamily=Times New Roman;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="10" width="450" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="User" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="120" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="2.1&#xa;Receive &amp;&#xa;Store Message" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="100" width="130" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="2.2&#xa;Normalize Text" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="100" width="120" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="2.3&#xa;Extract Entities&#xa;(Rule-Based NLP)" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="100" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="2.4&#xa;Create/Update&#xa;Records" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="683" y="293" width="130" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="2.5&#xa;Generate&#xa;Embedding" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="300" width="120" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="2.6&#xa;Store Extraction&#xa;&amp; Embedding" style="ellipse;whiteSpace=wrap;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="452" y="500" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Gemini API&#xa;(embedding)" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="310" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="message text" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="377.5609756097559" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="cleaned text" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="extracted entities" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="6" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="849" y="325.18633540372673" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="841.2447552447552" y="382" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="748" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="4" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="16" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="8" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="6" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="377" y="534.2261904761904" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" style="endArrow=block;fontFamily=Times New Roman;fontSize=13;" edge="1" parent="1" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="645" y="534.0147783251232" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="D3: chat_message_embeddings" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="183" y="504.5" width="191" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="D10: chat_message_extractions" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="646" y="504.5" width="191" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="D9: alerts" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="683" y="431" width="142.5" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="D8: visitor_events" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="804" y="382" width="126" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="D4: workers" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="310" width="126" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="D2: chat_messages" style="shape=rectangle;rounded=1;fontStyle=1;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="222" width="130" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontFamily=Times New Roman;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="-37" y="-10" width="1052" height="598" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Level 2 - Copilot RAG (4.0)" id="z-sO4H6nY_LgMuHAx8pQ">
+        <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="t" value="DFD Level 2 — Process 4.0: Copilot (Hybrid RAG + Text-to-SQL)" style="text;html=1;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="10" width="520" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="u" value="User" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="100" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="p41" value="4.1&#xa;Receive Query &amp;&#xa;Classify Intent" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="80" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p42" value="4.2&#xa;Vectorize Query" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p43" value="4.3&#xa;Semantic Retrieval&#xa;(3 stores)" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="80" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p44" value="4.4&#xa;Build Text-to-SQL&#xa;Plan" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="250" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p45" value="4.5&#xa;Execute SQL" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p46" value="4.6&#xa;Assemble Grounded&#xa;Answer" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="420" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p47" value="4.7&#xa;Refine with&#xa;Gemini/Ollama" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="420" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1" value="D3: chat_message_embeddings" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="60" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2" value="D6: workforce_task_embeddings" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="110" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3" value="D11: workforce_payment_embeddings" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="160" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4" value="D1: PostgreSQL (all tables)" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="260" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext1" value="Gemini API" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="420" width="110" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext2" value="Ollama" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="475" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl1" value="question" style="endArrow=block;" edge="1" source="u" target="p41" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl2" style="endArrow=block;" edge="1" source="p41" target="p42" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl3" value="query vector" style="endArrow=block;" edge="1" source="p42" target="p43" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl4" style="endArrow=block;" edge="1" source="p43" target="d1" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl5" style="endArrow=block;" edge="1" source="p43" target="d2" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl6" style="endArrow=block;" edge="1" source="p43" target="d3" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl7" value="intent" style="endArrow=block;" edge="1" source="p41" target="p44" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl8" value="SQL queries" style="endArrow=block;" edge="1" source="p44" target="p45" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl9" style="endArrow=block;" edge="1" source="p45" target="d4" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl10" value="semantic + SQL results" style="endArrow=block;" edge="1" source="p43" target="p46" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl11" style="endArrow=block;" edge="1" source="p45" target="p46" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl12" style="endArrow=block;" edge="1" source="p46" target="p47" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl13" style="endArrow=block;" edge="1" source="p47" target="ext1" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl14" style="endArrow=block;" edge="1" source="p47" target="ext2" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl15" value="answer" style="endArrow=block;dashed=1;" edge="1" source="p46" target="u" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Level 2 - Visitor Tracking (5.0)" id="eLSyKxd_h9DvDTrNOQgv">
+        <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="t" value="DFD Level 2 — Process 5.0: Visitor Tracking (YOLOv8 + DeepSORT)" style="text;html=1;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="10" width="530" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="u" value="Admin /&#xa;Supervisor" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="120" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p51" value="5.1&#xa;Upload Video /&#xa;Send Frames" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="100" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p52" value="5.2&#xa;YOLOv8 Person&#xa;Detection" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="100" width="130" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p53" value="5.3&#xa;DeepSORT&#xa;Identity Tracking" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="100" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="p54" value="5.4&#xa;Extract Events&#xa;(entry/exit/dwell/&#xa;zone transitions)" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="280" width="160" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="p55" value="5.5&#xa;Store Results &amp;&#xa;Generate Summary" style="ellipse;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="280" width="150" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1" value="D7: video_analyses" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="380" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2" value="D8: visitor_events" style="shape=partialRectangle;whiteSpace=wrap;fontStyle=1;top=0;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="430" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext" value="Camera Feed /&#xa;Video File" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="100" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext2" value="YOLO Model&#xa;(yolov8n.pt)" style="shape=rectangle;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="200" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl1" value="video/frames" style="endArrow=block;" edge="1" source="u" target="p51" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl2" value="frames" style="endArrow=block;" edge="1" source="p51" target="p52" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl3" value="bounding boxes&#xa;+ confidence" style="endArrow=block;" edge="1" source="p52" target="p53" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl4" style="endArrow=block;" edge="1" source="ext" target="p51" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl5" value="persistent tracks" style="endArrow=block;" edge="1" source="p53" target="p54" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl6" value="events, paths,&#xa;unique count" style="endArrow=block;" edge="1" source="p54" target="p55" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl7" style="endArrow=block;" edge="1" source="p55" target="d1" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl8" style="endArrow=block;" edge="1" source="p55" target="d2" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fl9" value="results" style="endArrow=block;dashed=1;" edge="1" source="p55" target="u" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

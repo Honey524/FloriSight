@@ -1,0 +1,187 @@
+<mxfile host="65bd71144e">
+    <diagram id="es58tsOo5LgB89NjyZu2" name="Module Architecture Diagram">
+        <mxGraphModel dx="613" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="FloriSight — Module Architecture (Layered)" style="text;html=1;fontSize=17;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="10" width="500" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Layer 1 — Presentation (Next.js 16 + React 19 + Framer Motion)" style="swimlane;startSize=28;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="60" width="1500" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="LandingPage&#xa;(SPA tabs)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="20" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="LoginPage&#xa;+ RegisterPage" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="150" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="DashboardPage&#xa;(role-aware)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="290" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ChatPanel" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="430" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="CopilotModal&#xa;(AgriSage)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="550" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="LiveFarmMap&#xa;(Google Maps)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="680" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Attendance&#xa;MarkerPanel" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="810" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="WorkerCard&#xa;+ TaskPanel" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="940" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="VisitorTracking&#xa;Preview" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="1070" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="OnboardingTour" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="1210" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="PDF Report&#xa;Generator" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="3">
+                    <mxGeometry x="1340" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Layer 2 — API Routes (Next.js Server-Side)" style="swimlane;startSize=28;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="220" width="1500" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="/api/auth&#xa;(NextAuth)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="20" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="/api/register" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="140" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="/api/dashboard" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="260" y="40" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="/api/chat" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="390" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="/api/copilot" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="510" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="/api/tasks" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="630" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="/api/tracking" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="750" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="/api/alerts" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="870" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="/api/visitors" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="990" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="/api/crops&#xa;/api/equipment" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="1110" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="/api/leave" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="15">
+                    <mxGeometry x="1250" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Layer 3 — Intelligence Engine (NLP + RAG + CV)" style="swimlane;startSize=28;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="380" width="1500" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Text Normalizer&#xa;normalizeLooseText()" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="20" y="40" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="NLP Extraction&#xa;(zone, attendance,&#xa;visitors, tasks, wages)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="180" y="35" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Intent Classifier&#xa;buildTextToSqlPlan()" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="350" y="40" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Text-to-SQL&#xa;Engine" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="520" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Embedding Generator&#xa;vectorizeText()" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="660" y="40" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Semantic Retriever&#xa;cosineSimilarity()" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="820" y="40" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Copilot Answer&#xa;Generator (RAG)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="980" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Gemini Refinement&#xa;(optional)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="1130" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Haversine&#xa;Zone Validator" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="1280" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="YOLOv8 Detection&#xa;Server (Python)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="180" y="100" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="DeepSORT&#xa;Tracker (Python)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="340" y="100" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Event Extractor&#xa;(entries, dwell, paths)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="27">
+                    <mxGeometry x="490" y="100" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Layer 4 — Data Layer (PostgreSQL + pgvector)" style="swimlane;startSize=28;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="570" width="1500" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="users" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="20" y="40" width="80" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="supervisors" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="115" y="40" width="90" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="workers" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="220" y="40" width="80" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="chat_messages" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="315" y="40" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="chat_message&#xa;_embeddings" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="430" y="35" width="100" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="chat_message&#xa;_extractions" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="545" y="35" width="100" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="visitor_events" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="660" y="40" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="alerts" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="775" y="40" width="70" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="video_analyses" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="860" y="40" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="activity_logs" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="975" y="40" width="90" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="workforce_task&#xa;_embeddings" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="1080" y="35" width="110" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="workforce_payment&#xa;_embeddings" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="1205" y="35" width="120" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="crops /&#xa;equipment /&#xa;leave_requests" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="40">
+                    <mxGeometry x="1340" y="30" width="110" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Layer 5 — External Services" style="swimlane;startSize=28;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="720" width="1500" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Google OAuth" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="40" y="40" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Gemini API&#xa;(embeddings +&#xa;refinement)" style="rounded=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="200" y="35" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Google Maps API" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="370" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Ollama (local LLM)" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="540" y="40" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Browser&#xa;Geolocation API" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="720" y="35" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="Razorpay" style="rounded=1;whiteSpace=wrap;fontSize=10;fillColor=#ffffff;" vertex="1" parent="54">
+                    <mxGeometry x="890" y="40" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

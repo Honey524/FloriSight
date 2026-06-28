@@ -1,0 +1,304 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Farm Administrator",
+      "email": "admin@florisight.local",
+      "password": "admin123",
+      "role": "Admin",
+      "phoneNumber": "+919876543210"
+    },
+    {
+      "id": "admin-2",
+      "name": "Operations Admin",
+      "email": "operations@florisight.local",
+      "password": "admin123",
+      "role": "Admin",
+      "phoneNumber": "+919876543211"
+    },
+    {
+      "id": "sup-1",
+      "name": "Asha Menon",
+      "email": "asha@florisight.local",
+      "password": "supervisor123",
+      "role": "Supervisor"
+    },
+    {
+      "id": "sup-2",
+      "name": "Ravi Kumar",
+      "email": "ravi@florisight.local",
+      "password": "supervisor123",
+      "role": "Supervisor"
+    },
+    {
+      "id": "wrk-1",
+      "name": "Meera Nair",
+      "email": "meera@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-1"
+    },
+    {
+      "id": "wrk-2",
+      "name": "Anil Das",
+      "email": "anil@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-1"
+    },
+    {
+      "id": "wrk-3",
+      "name": "Priya Iyer",
+      "email": "priya@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-1"
+    },
+    {
+      "id": "wrk-4",
+      "name": "Rohit Sen",
+      "email": "rohit@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-1"
+    },
+    {
+      "id": "wrk-5",
+      "name": "Kavya Pillai",
+      "email": "kavya@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-1"
+    },
+    {
+      "id": "wrk-6",
+      "name": "Neha Rao",
+      "email": "neha@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-2"
+    },
+    {
+      "id": "wrk-7",
+      "name": "Kiran Shetty",
+      "email": "kiran@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-2"
+    },
+    {
+      "id": "wrk-8",
+      "name": "Arjun Nair",
+      "email": "arjun@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-2"
+    },
+    {
+      "id": "wrk-9",
+      "name": "Sneha Das",
+      "email": "sneha@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-2"
+    },
+    {
+      "id": "wrk-10",
+      "name": "Vivek Kumar",
+      "email": "vivek@florisight.local",
+      "password": "worker123",
+      "role": "Worker",
+      "supervisorId": "sup-2"
+    }
+  ],
+  "supervisors": [
+    {
+      "id": "sup-1",
+      "zone": "Greenhouse A and Packing Unit",
+      "activeTasks": 8,
+      "completedToday": 5,
+      "visitorLogs": 34,
+      "alerts": 1,
+      "performance": "92%"
+    },
+    {
+      "id": "sup-2",
+      "zone": "Nursery Bay and Visitor Gate",
+      "activeTasks": 6,
+      "completedToday": 4,
+      "visitorLogs": 24,
+      "alerts": 2,
+      "performance": "87%"
+    }
+  ],
+  "workers": [
+    {
+      "id": "wrk-1",
+      "supervisorId": "sup-1",
+      "zone": "Greenhouse A",
+      "task": "Harvest Dutch roses",
+      "status": "In progress",
+      "progress": 62,
+      "attendance": "Present",
+      "logsToday": 6,
+      "salaryStatus": "Recorded",
+      "dailyWage": 950,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-2",
+      "supervisorId": "sup-1",
+      "zone": "Packing Unit",
+      "task": "Pack export cartons",
+      "status": "Review",
+      "progress": 88,
+      "attendance": "Present",
+      "logsToday": 4,
+      "salaryStatus": "Pending review",
+      "dailyWage": 900,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-3",
+      "supervisorId": "sup-1",
+      "zone": "Greenhouse A",
+      "task": "Rose bed irrigation check",
+      "status": "In progress",
+      "progress": 57,
+      "attendance": "Present",
+      "logsToday": 3,
+      "salaryStatus": "Pending review",
+      "dailyWage": 920,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-4",
+      "supervisorId": "sup-1",
+      "zone": "Packing Unit",
+      "task": "Label export bundles",
+      "status": "Ready",
+      "progress": 45,
+      "attendance": "Present",
+      "logsToday": 2,
+      "salaryStatus": "Not recorded",
+      "dailyWage": 910,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-5",
+      "supervisorId": "sup-1",
+      "zone": "Greenhouse A",
+      "task": "Stem quality inspection",
+      "status": "Review",
+      "progress": 76,
+      "attendance": "Late",
+      "logsToday": 5,
+      "salaryStatus": "Recorded",
+      "dailyWage": 940,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-6",
+      "supervisorId": "sup-2",
+      "zone": "Visitor Gate",
+      "task": "Visitor entry validation",
+      "status": "In progress",
+      "progress": 71,
+      "attendance": "Present",
+      "logsToday": 8,
+      "salaryStatus": "Recorded",
+      "dailyWage": 980,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-7",
+      "supervisorId": "sup-2",
+      "zone": "Nursery Bay",
+      "task": "Seedling tray inspection",
+      "status": "Pending",
+      "progress": 34,
+      "attendance": "Late",
+      "logsToday": 2,
+      "salaryStatus": "Pending review",
+      "dailyWage": 870,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-8",
+      "supervisorId": "sup-2",
+      "zone": "Visitor Gate",
+      "task": "Queue flow monitoring",
+      "status": "In progress",
+      "progress": 66,
+      "attendance": "Present",
+      "logsToday": 4,
+      "salaryStatus": "Recorded",
+      "dailyWage": 960,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-9",
+      "supervisorId": "sup-2",
+      "zone": "Nursery Bay",
+      "task": "Sapling moisture review",
+      "status": "Review",
+      "progress": 81,
+      "attendance": "Present",
+      "logsToday": 6,
+      "salaryStatus": "Pending review",
+      "dailyWage": 930,
+      "paymentMode": "Daily wage"
+    },
+    {
+      "id": "wrk-10",
+      "supervisorId": "sup-2",
+      "zone": "Visitor Gate",
+      "task": "Entry badge reconciliation",
+      "status": "Ready",
+      "progress": 28,
+      "attendance": "Present",
+      "logsToday": 1,
+      "salaryStatus": "Not recorded",
+      "dailyWage": 890,
+      "paymentMode": "Daily wage"
+    }
+  ],
+  "activityLogs": [
+    {
+      "time": "09:20",
+      "person": "Asha Menon",
+      "tag": "Visitor entry",
+      "text": "5 visitors entered through Gate 2."
+    },
+    {
+      "time": "10:05",
+      "person": "Meera Nair",
+      "tag": "Task update",
+      "text": "Packing batch B-18 image uploaded."
+    },
+    {
+      "time": "10:42",
+      "person": "Ravi Kumar",
+      "tag": "Alert",
+      "text": "Visitor Gate density is above normal."
+    },
+    {
+      "time": "11:10",
+      "person": "Neha Rao",
+      "tag": "Visitor update",
+      "text": "School group checked into Nursery Bay."
+    },
+    {
+      "time": "11:35",
+      "person": "Kavya Pillai",
+      "tag": "Task update",
+      "text": "Stem quality inspection moved to supervisor review."
+    },
+    {
+      "time": "12:05",
+      "person": "Arjun Nair",
+      "tag": "Visitor entry",
+      "text": "7 visitors queued at Visitor Gate for the noon tour."
+    }
+  ]
+}

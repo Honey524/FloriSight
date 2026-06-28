@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram id="jqyhIxJ1S0AzpK1wpEKd" name="System Architecture">
+        <mxGraphModel dx="1626" dy="1750" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="63" value="PRESENTATION LAYER" style="rounded=1;whiteSpace=wrap;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=8;align=left;spacingLeft=14;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="50" width="880" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="Next.js&#xa;Frontend" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="90" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="React UI&#xa;Components" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="90" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="Tailwind CSS&#xa;Styling" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="90" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="endArrow=block;endFill=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="180" as="sourcePoint"/>
+                        <mxPoint x="500" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="APPLICATION LAYER" style="rounded=1;whiteSpace=wrap;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=8;align=left;spacingLeft=14;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="220" width="880" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Google OAuth&#xa;Authentication" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="260" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="REST API&#xa;Routes" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="260" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="Task and Workforce&#xa;Management" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="260" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="endArrow=block;endFill=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="350" as="sourcePoint"/>
+                        <mxPoint x="500" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" value="INTELLIGENCE LAYER" style="rounded=1;whiteSpace=wrap;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=8;align=left;spacingLeft=14;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="390" width="880" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="NLP&#xa;Pipeline" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="430" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="Hybrid RAG +&#xa;Text-to-SQL Engine" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="430" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="YOLOv8 +&#xa;DeepSORT Vision" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="430" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="endArrow=block;endFill=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="520" as="sourcePoint"/>
+                        <mxPoint x="500" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="DATA LAYER" style="rounded=1;whiteSpace=wrap;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=8;align=left;spacingLeft=14;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="560" width="880" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="PostgreSQL&#xa;Database" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="600" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="pgvector&#xa;Embeddings" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="600" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Gemini API&#xa;(External)" style="rounded=1;whiteSpace=wrap;fontSize=11;fontStyle=0;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="600" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-1" y="-57" width="990" height="870" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
