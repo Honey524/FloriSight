@@ -146,13 +146,18 @@ export async function POST(request) {
     let apiUrl = "";
     if (process.env.FLORISIGHT_PYTHON_VISION_URL) {
       apiUrl = new URL("/", process.env.FLORISIGHT_PYTHON_VISION_URL).toString();
+      
+      // Instead of proxying the fetch and hitting Vercel's 10s serverless timeout,
+      // return a 307 Temporary Redirect. The browser will automatically re-issue 
+      // the exact same POST request (with the body) directly to the Render backend!
+      return NextResponse.redirect(apiUrl, { status: 307 });
     } else {
       // Ensure the local detection server is running
       const port = await ensureDetectionServer();
       apiUrl = `http://127.0.0.1:${port}/`;
     }
 
-    // Forward the frame to the persistent Python server
+    // Forward the frame to the persistent Python server (only happens locally)
     const res = await fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -82,8 +82,17 @@ class DetectionHandler(BaseHTTPRequestHandler):
         """Health check."""
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
-        self.wfile.write(json.dumps({"status": "ok", "model": "yolov8s"}).encode())
+        self.wfile.write(json.dumps({"status": "ok", "model": "yolov8n"}).encode())
+
+    def do_OPTIONS(self):
+        """Handle CORS preflight requests."""
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.end_headers()
 
     def do_POST(self):
         """Process a frame for detection or a video for tracking."""
@@ -166,9 +175,9 @@ class DetectionHandler(BaseHTTPRequestHandler):
             frame_area = max(1.0, float(width * height))
             min_box_ratio = float(os.environ.get("FLORISIGHT_MIN_PERSON_BOX_RATIO", "0.003"))
 
-            # Run YOLO
+            # Run YOLO with reduced image size to prevent OOM and speed up inference
             results = DetectionHandler.model.predict(
-                frame, verbose=False, classes=[0], conf=confidence
+                frame, verbose=False, classes=[0], conf=confidence, imgsz=320
             )
 
             detections = []
@@ -255,7 +264,7 @@ def main():
 
     # Warm up the model with a dummy frame
     dummy = np.zeros((240, 320, 3), dtype=np.uint8)
-    DetectionHandler.model.predict(dummy, verbose=False, classes=[0], conf=0.25)
+    DetectionHandler.model.predict(dummy, verbose=False, classes=[0], conf=0.25, imgsz=320)
     print(f"Model loaded and warmed up.", file=sys.stderr)
 
     server = HTTPServer(("0.0.0.0", port), DetectionHandler)
